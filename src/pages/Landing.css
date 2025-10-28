@@ -1,0 +1,11 @@
+.gradient-background {
+  background: linear-gradient(135deg, #04341d 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+}
