@@ -98,33 +98,33 @@ export default function Dashboard() {
             <div className="card actions-card" style={{ marginTop: 24, marginBottom: 24 }}>
               <div className="actions actions-outside">
                 <Link to="/transfer" className="btn-action btn-primary btn-transfer">
-                  <TransferIcon size={60} className="icon" />
+                  <TransferIcon size={50} className="icon" />
                   <span>Transfer</span>
                 </Link>
 
                 <Link to="/withdraw" className="btn-action btn-outline btn-withdraw">
-                  <WithdrawIcon size={60} className="icon" />
+                  <WithdrawIcon size={50} className="icon" />
                   <span>Withdraw</span>
                 </Link>
 
 
                 <Link to="/fund" className="btn-action btn-outline btn-fund">
-                  <BankIcon size={60} className="icon" />
+                  <BankIcon size={50} className="icon" />
                   <span>Add Fund</span>
                 </Link>
 
                 <Link to="/airtime" className="btn-action btn-outline btn-airtime">
-                  <AirtimeIcon size={60} className="icon" />
+                  <AirtimeIcon size={50} className="icon" />
                   <span>Airtime</span>
                 </Link>
 
                 <Link to="/history" className="btn-action btn-outline btn-history">
-                  <HistoryIcon size={60} className="icon" />
+                  <HistoryIcon size={50} className="icon" />
                   <span>History</span>
                 </Link>
 
                 <Link to="/cardpage" className="btn-action btn-outline btn-history">
-                  <CardIcon size={60} className="icon" />
+                  <CardIcon size={50} className="icon" />
                   <span>Card</span>
                 </Link>
 
