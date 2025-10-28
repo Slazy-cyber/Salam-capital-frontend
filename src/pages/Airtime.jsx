@@ -19,7 +19,7 @@ export default function Airtime() {
       setLoading(true);
       setMessage("");
 
-      const res =await API.post("/airtime", {
+      const res = await API.post("/airtime", {
         network,
         amount,
         phone,

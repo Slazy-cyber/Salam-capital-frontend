@@ -1,22 +1,24 @@
 import axios from "axios";
 
-// Remote server (production). Use this if backend routes are mounted at root (no `/api` prefix).
+
 const API = axios.create({
   baseURL: "https://salaam-capital-server.onrender.com/api",
 });
 
-// Local development server (example) — uncomment to use locally
+
 // const API = axios.create({
 //   baseURL: "http://localhost:7654/api",
 // });
+
+
 API.interceptors.request.use((req) => {
-  // Log full request URL for debugging (helps track 404s)
+ 
   try {
     const base = req.baseURL || API.defaults.baseURL || "";
     const fullUrl = base + (req.url || "");
     console.debug("[API request]", (req.method || "GET").toUpperCase(), fullUrl);
   } catch (e) {
-    // ignore logging errors
+ 
   }
 
   if (req.url !== "/signup") {

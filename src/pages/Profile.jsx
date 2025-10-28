@@ -27,11 +27,11 @@ export default function Profile() {
         } catch (err) {
             console.error("Failed to fetch /users/me:", err, err?.response?.config?.url);
             setLastErrorDetails(err?.response || { message: err.message });
-            
+
             const msg = err?.response?.data?.message || err.message || "Failed to load profile";
             setError(msg);
 
-            
+
             setError(msg);
             setUser(null);
         } finally {
@@ -73,11 +73,7 @@ export default function Profile() {
                 </div>
             ) : user ? (
                 <div>
-                    <div style={{ position: 'absolute', right: 12, top: 12 }}>
-                        <button className="btn btn-sm btn-outline-secondary" onClick={() => setDebugVisible(v => !v)}>
-                            {debugVisible ? 'Hide Debug' : 'Show Debug'}
-                        </button>
-                    </div>
+
                     <div className="text-center">
                         <img
                             src={
@@ -140,7 +136,7 @@ export default function Profile() {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="profile-section">
                                 <h4>Account Information</h4>
                                 <div className="info-grid">
@@ -194,22 +190,8 @@ export default function Profile() {
                         </form>
                     )}
 
-                   
-                    {debugVisible && (
-                        <div className="profile-debug" style={{ marginTop: 16, padding: 12, background: '#f8f9fa', borderRadius: 6 }}>
-                            <h5>Debug</h5>
-                            <div style={{ fontSize: 13, color: '#333' }}>
-                                <div><strong>Token present:</strong> {localStorage.getItem('token') ? 'yes' : 'no'}</div>
-                                <div style={{ marginTop: 8 }}><strong>Last response (status):</strong> {lastResponse?.status ?? 'none'}</div>
-                                <div style={{ marginTop: 8 }}><strong>Last response data:</strong>
-                                    <pre style={{ whiteSpace: 'pre-wrap', maxHeight: 160, overflow: 'auto' }}>{lastResponse ? JSON.stringify(lastResponse.data, null, 2) : '—'}</pre>
-                                </div>
-                                <div style={{ marginTop: 8 }}><strong>Last error details:</strong>
-                                    <pre style={{ whiteSpace: 'pre-wrap', maxHeight: 160, overflow: 'auto' }}>{lastErrorDetails ? JSON.stringify(lastErrorDetails, null, 2) : '—'}</pre>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+
+
                 </div>
             ) : (
                 <div className="text-center">

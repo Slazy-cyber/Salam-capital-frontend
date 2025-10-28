@@ -26,9 +26,9 @@ export default function Login() {
 
     setIsLoading(true);
     try {
-      console.log("Sending login request with data:", form);
+
       const response = await API.post("/login", form);
-      console.log("Login response:", response.data);
+
       localStorage.setItem("token", response.data.token);
       alert("Login successful!");
       navigate("/dashboard");

@@ -6,7 +6,7 @@ export default function Transfer() {
   const [amount, setAmount] = useState("");
   const [transactions, setTransactions] = useState([]);
 
-  // Fetch transaction history
+ 
   const fetchTransactions = async () => {
     try {
       const res = await API.get("/history");
@@ -27,7 +27,7 @@ export default function Transfer() {
       alert("Transfer successful!");
       setRecipient("");
       setAmount("");
-      fetchTransactions(); // refresh transactions after transfer
+      fetchTransactions();
     } catch (err) {
       alert(err.response?.data?.msg || "Transfer failed");
     }
@@ -35,7 +35,7 @@ export default function Transfer() {
 
   return (
     <div className="container mt-5" style={{ maxWidth: "400px" }}>
-      <h3>Transfer Funds</h3>
+      {/* <h3>Transfer Funds</h3>
       <form onSubmit={handleTransfer}>
         <input
           className="form-control mb-2"
@@ -51,7 +51,7 @@ export default function Transfer() {
           onChange={(e) => setAmount(e.target.value)}
         />
         <button className="btn btn-primary w-100">Transfer</button>
-      </form>
+      </form> */}
 
       <hr />
       <h5>Transaction History</h5>

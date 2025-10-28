@@ -35,9 +35,9 @@ export default function Signup() {
 
     setIsLoading(true);
     try {
-      console.log("Sending signup request with data:", form);
+
       const response = await API.post("/signup", form);
-      console.log("Signup response:", response.data);
+
       alert("Signup successful! Please login.");
       navigate("/login");
     } catch (error) {

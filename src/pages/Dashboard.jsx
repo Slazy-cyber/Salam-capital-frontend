@@ -20,9 +20,9 @@ export default function Dashboard() {
     const fetchUser = async () => {
       setIsLoading(true);
       try {
-        console.log("Fetching user data from /me");
+
         const response = await API.get("/me");
-        console.log("User data response:", response.data);
+
         setUser(response.data);
       } catch (err) {
         console.error("Dashboard error:", err, {
@@ -81,7 +81,7 @@ export default function Dashboard() {
         <div className="dashboard-row">
           <div className="summary-col">
             <div className="card summary-card">
-              <div className="summary-title"  style={{ fontWeight: 400, fontSize: '1.4rem' }}>Welcome</div>
+              <div className="summary-title" style={{ fontWeight: 400, fontSize: '1.4rem' }}>Welcome</div>
               <h2 style={{ fontWeight: 800, fontSize: '1.8rem' }}>
                 {user.firstName} {user.lastName}
               </h2>
@@ -94,8 +94,8 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Actions wrapped in a card for better UI */}
-            <div className="card actions-card" style={{marginTop: 24, marginBottom: 24}}>
+
+            <div className="card actions-card" style={{ marginTop: 24, marginBottom: 24 }}>
               <div className="actions actions-outside">
                 <Link to="/transfer" className="btn-action btn-primary btn-transfer">
                   <TransferIcon size={60} className="icon" />
@@ -107,7 +107,7 @@ export default function Dashboard() {
                   <span>Withdraw</span>
                 </Link>
 
-                
+
                 <Link to="/fund" className="btn-action btn-outline btn-fund">
                   <BankIcon size={60} className="icon" />
                   <span>Add Fund</span>
@@ -132,11 +132,11 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Recent activities moved under actions */}
-            <div className="card recent-card" style={{marginTop: 24}}>
+
+            <div className="card recent-card" style={{ marginTop: 24 }}>
               <div className="summary-title">Recent Transactions</div>
               <div className="recent-list">
-                {/* If user has transactions, show few. Fallback placeholder otherwise */}
+
                 {(user.transactions && user.transactions.length > 0) ? (
                   user.transactions.slice(0, 5).map((t, idx) => (
                     <div className="recent-item" key={idx}>
@@ -145,7 +145,7 @@ export default function Dashboard() {
                     </div>
                   ))
                 ) : (
-                   <div className="mt-2"> recent activity</div>
+                  <div className="mt-2"> recent activity</div>
                 )}
               </div>
             </div>
