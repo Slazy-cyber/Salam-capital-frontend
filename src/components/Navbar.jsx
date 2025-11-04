@@ -10,7 +10,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark px-3" style={{ backgroundColor: '#1db954' }}>
+        <nav className="navbar navbar-expand-lg navbar-dark px-3" style={{ background: 'linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #06b6d4 100%)' }}>
             <div className="container-fluid">
                 <Link className="navbar-brand d-flex align-items-center" to="/dashboard">
                     <BankIcon size={20} className="me-2" aria-hidden="true" />
