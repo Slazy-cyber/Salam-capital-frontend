@@ -39,9 +39,39 @@ export default function Airtime() {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: "400px" }}>
-      <h3>Buy Airtime</h3>
-      <form onSubmit={handleAirtime}>
+    <div 
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #1db954 75%, #0ea56a 100%)",
+        padding: "40px 20px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      <div 
+        className="container" 
+        style={{ 
+          maxWidth: "450px",
+          background: "rgba(255, 255, 255, 0.98)",
+          borderRadius: "20px",
+          padding: "40px 30px",
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
+          backdropFilter: "blur(10px)"
+        }}
+      >
+        <h3 style={{ 
+          textAlign: "center", 
+          marginBottom: "30px",
+          background: "linear-gradient(135deg, #667eea 0%, #1db954 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontWeight: "700",
+          fontSize: "2rem"
+        }}>
+          Buy Airtime
+        </h3>
+        <form onSubmit={handleAirtime}>
         <select
           className="form-control mb-2"
           value={network}
@@ -77,6 +107,7 @@ export default function Airtime() {
       {message && (
         <div className="alert alert-info text-center mt-3">{message}</div>
       )}
+      </div>
     </div>
   );
 }
