@@ -1,3 +1,9 @@
+/* Light blue background for the entire page */
+body {
+  background-color: lightblue;
+  min-height: 100vh;
+}
+
 .profile-container {
   max-width: 800px;
   margin: 40px auto;
